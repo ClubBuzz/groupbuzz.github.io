@@ -40,31 +40,47 @@
     <!-- JSON-LD conforming to Google Structured Data specification. -->
     <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "Dataset",
-      "name" : "British Cycling Sky Ride Sessions",
-      "id": "",
+      "@context": [
+        "https://schema.org/",
+        "https://openactive.io/"
+      ],
+      "@type": "Dataset",
+      "@id": "",
       "url": "",
-      "description" : "Session data from the goskyride.com site; published using OpenActive RPDE v1.0.",
+      "name": "British Cycling Sky Ride Sessions",
+      "description": "Session data from the goskyride.com site; published using OpenActive RPDE v1.0.",
       "keywords":[
-         "Cycling",
-         "Sky Ride",
-         "OpenActive"
+          "Cycling",
+          "Sky Ride",
+          "OpenActive"
       ],
       "license" : "https://creativecommons.org/licenses/by/4.0/",
-      "distribution" : {
-        "@type" : "DataDownload",
-        "encodingFormat" : "application/vnd.openactive.rpde+json; version=1.0",
-        "contentUrl" : "http://api.britishcycling.com/openactive/rpde"
-      },
-      "inLanguage": "en-GB",
+      "distribution": [
+        {
+          "@type" : "DataDownload",
+          "encodingFormat" : "application/vnd.openactive.rpde+json; version={rpdeversion}",
+          "contentUrl" : "http://api.britishcycling.com/openactive/rpde"
+        }
+      ],
+      "discussionUrl": "https://github.com/britishcycling-oa/opendata/issues",
+      "documentation": "https://github.com/britishcycling-oa/opendata",
+      "inLanguage": [
+        "en-GB"
+      ],
       "publisher": {
-         "@type": "Organization", 
-         "name": "British Cycling",
-         "url": "https://www.britishcycling.org.uk",
-         "logo": "images/logo.png"
+        "@type": "Organization",
+        "name": "British Cycling",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "images/logo.png"
+        },
+        "url": "https://www.britishcycling.org.uk"
       },
-      "datePublished" : "2014-07-20T00:00:00.000Z"
+      "datePublished": "2014-07-20T00:00:00.000Z",
+      "backgroundImage": {
+        "@type": "ImageObject",
+        "url": "images/bg.jpg"
+      }
     }
     </script>
   </head>
